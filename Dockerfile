@@ -7,7 +7,6 @@ WORKDIR /usr/src/app
 # This allows caching of npm install if dependencies don't change.
 COPY package*.json ./
 
-# Install application dependencies.
 RUN npm install
 
 # Copy the rest of the application source code to the working directory.
@@ -17,7 +16,5 @@ COPY . .
 # Replace 3000 with the actual port your app uses.
 EXPOSE 3000
 
-# Define environment variables (
 
-# Command to run the application when the container starts.
 CMD ["node", "server.js"]
